@@ -1,16 +1,28 @@
 \input{single-column-sleek-journal-article}
 
+\def\DefaultHeightofCheckBox{0.8em}  
+\def\DefaultWidthofCheckBox{0.8em}  
+\def\DefaultHeightofText{1em}
+\def\DefaultHeightofTextMultiline{4em}
+
 % custom styling is necessary to give more freedom in how the title is displayed
 % the existing style merely dictates the placement and rules above and below this section
-\title{McGill Undergraduate 396/397 Research Project \vspace{.2em} \\
-Project :  \\}%
+\title{McGill Undergraduate 396/397 Research Project \vspace{.5em} \\
+Project Title \vspace{.2em} \\
+\TextField[name = projecttitle,
+		   width = \textwidth, multiline = true, height = 2.2em, 
+           value = Residue Conformation Prediction of Simulated Point Mutations on Protein Surfaces,
+           charsize = 15pt]
+          {}}
 \author{
-McGill University
+McGill University \\
+Fillable Form with Example Material and Course Description
 }
-\date{}
-
+\date{\vspace{-1em}}
 
 \begin{document}
+
+\begin{Form}
 \maketitle
 
 \section*{Course Description}
@@ -49,34 +61,48 @@ McGill University
 		The details of the grading of your presentation should be discussed with your supervisor.
 		
 		The report is usually handed in before the last day of the semester, but sometimes will be requested earlier.
-		It is generally beneficial to finish your report early, freeing you to make any corrections and also giving you extra time to prepare for other exams.
+		Reports tend to be between 20 and 50 pages long; reports as long as 100 pages are neither unheard of nor likely read thoroughly; and reports are expected to be at least 10 good pages.
+		You are highly encouraged to produce a professional report with high quality diagrams, proper figure legends, and multiple citations.
+		To go above and beyond, try typesetting in LaTeX and preparing your report as though for publication.
+
+\section{Project Information}
+
+	\subsection{Project Description}
+	
+		\TextField[name = projectdescription, width = \textwidth, multiline = true, height = 10.2em, value = {Detailed characterisation and manipulation of protein interactions, structures, and binding sites is vital to understanding and controlling biological systems as proteins, including enzymes that accelerate reactions, components to microscopic structures like cytoskeleton, regulatory activators and inhibitors, signalling bodies, etc., affect nearly all aspects of an organism's   function.  To simulate the binding activity of a computationally mutated protein, the conformation of mutated residues must be predicted with some accuracy.  This study will use mutations and conformations within the Protein Data Bank to assess the predictability of residue conformations based on their environment and will further attempt to predict these structures if possible.  Techniques used will include nearest neighbour clustering algorithms and Gaussian mixture models.}]{}
 		
+	\subsection{Judging the Project}
+	
+		\TextField[name = projectjudgment, width = \textwidth, multiline = true, height = 4.2em, value = {The success of the project will be judged primarily by the certainty of predictability of conformations based on their environments, in particular the degree of certainty and the techniques used to reach this certainty that are outsided of the few published works on this topic.}]{}
 
 \begin{multicols}{2}
 \section{Student Information}
 	
 	\sffamily
 		\begin{tabular}{l|r}
-			Name & John McCarthy \\
-			Student Number & 260467886 \\
-			Department & School of Computer Science \\
-			Year & U3 \\
+			Name & \TextField[name = studentname, width = 13em, value = John McCarthy]{} \\
+			Student Number & \TextField[name = studentnumber, width = 13em, value = 260467886]{} \\
+			Department & \TextField[name = studentdepartment, width = 13em, value = School of Computer Science]{} \\
+			Year & \TextField[name = studentyear, width = 13em, value = U3]{} \\
 			\bottomrule
 		\end{tabular}
 	\normalfont
-	
-\section{Project Information}
 
 \section{Grading}
 
+	\sffamily
 	\begin{tabular}{l|r}
 			 Description & Grade Percentage \\
 		\midrule \\
-			End of Semester Presentation & 10 \\
-			Final Report	& 60 \\
-			Laboratory Performance	& 30 \\
+			End of Semester Presentation & \TextField[name = presentationpercent, width = 2em, value = 10]{} \\
+			Final Report	& \TextField[name = reportpercent, width = 2em, value = 60]{} \\
+			Laboratory Performance	& \TextField[name = laboratorypercent, width = 2em, value = 30]{} \\
 		\bottomrule 
 	\end{tabular}
 \end{multicols}
 
+\vfill
+\color{lightgray} \centering for questions or concerns regarding this form \\ visit https://github.com/mcgill-csus/undergraduate-research-project-form/ \\ or email calem.bendell@mail.mcgill.ca
+
+\end{Form}
 \end{document}
