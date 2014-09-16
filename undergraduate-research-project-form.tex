@@ -11,7 +11,7 @@
 Project Title \vspace{.2em} \\
 \TextField[name = projecttitle,
 		   width = \textwidth, multiline = true, height = 2.2em, 
-           value = Residue Conformation Prediction of Simulated Point Mutations on Protein Surfaces,
+           value = Model Driven Development of GUI Applications and Their Generated Binding to Application Logic and the Domain Model,
            charsize = 15pt]
           {}}
 \author{
@@ -69,18 +69,23 @@ Fillable Form with Example Material and Course Description
 
 	\subsection{Project Description}
 	
-		\TextField[name = projectdescription, width = \textwidth, multiline = true, height = 10.2em, value = {Detailed characterisation and manipulation of protein interactions, structures, and binding sites is vital to understanding and controlling biological systems as proteins, including enzymes that accelerate reactions, components to microscopic structures like cytoskeleton, regulatory activators and inhibitors, signalling bodies, etc., affect nearly all aspects of an organism's   function.  To simulate the binding activity of a computationally mutated protein, the conformation of mutated residues must be predicted with some accuracy.  This study will use mutations and conformations within the Protein Data Bank to assess the predictability of residue conformations based on their environment and will further attempt to predict these structures if possible.  Techniques used will include nearest neighbour clustering algorithms and Gaussian mixture models.}]{}
+		\TextField[name = projectdescription, width = \textwidth, multiline = true, height = 10.2em, value = {Graphical user interface development can now typically be done through a WYSIWYG interface, allowing a programmer to develop an application through a code generating program up until the point of programming.
+		Once a GUI is to be bound to application logic or a domain model, a programmer must return to code, usually binding an abstract event to clickable items.
+		For more complicated applications, a GUI will repeatedly interact with application logic and update the view, usually through bindings.
+		1. This project will create a modelling tool to gracefully bind a user view to an abstract domain model.
+		2. A further goal of the project is to extend this modelling tool to bind parts of a user view directly to application logic.}]{}
 		
 	\subsection{Judging the Project}
 	
-		\TextField[name = projectjudgment, width = \textwidth, multiline = true, height = 4.2em, value = {The success of the project will be judged primarily by the certainty of predictability of conformations based on their environments, in particular the degree of certainty and the techniques used to reach this certainty that are outsided of the few published works on this topic.}]{}
+		\TextField[name = projectjudgment, width = \textwidth, multiline = true, height = 4.2em, value = {The success of the project will be judged by the completion of the two clear goals listed in Section 1.1.
+			The project will be deemed exceedingly well done if there is evidence that the goal was achieved elegantly and with ease of use in mind.}]{}
 
 \begin{multicols}{2}
 \section{Student Information}
 	
 	\sffamily
 		\begin{tabular}{l|r}
-			Name & \TextField[name = studentname, width = 13em, value = John McCarthy]{} \\
+			Name & \TextField[name = studentname, width = 13em, value = Calem Bendell]{} \\
 			Student Number & \TextField[name = studentnumber, width = 13em, value = 260467886]{} \\
 			Department & \TextField[name = studentdepartment, width = 13em, value = School of Computer Science]{} \\
 			Year & \TextField[name = studentyear, width = 13em, value = U3]{} \\
@@ -102,7 +107,23 @@ Fillable Form with Example Material and Course Description
 \end{multicols}
 
 \vfill
-\color{lightgray} \centering for questions or concerns regarding this form \\ visit https://github.com/mcgill-csus/undergraduate-research-project-form/ \\ or email calem.bendell@mail.mcgill.ca
+
+\section{Signatures}
+
+\subsection{Student}
+
+\TextField[name = studentsig, width=20em, height=1.5em, value = Calem Bendell]{}
+
+\subsection{Supervisor}
+
+\TextField[name = supervisorsig, width=20em, height=1.5em, value = J\"org Kienzle]{}
+
+\subsection{Course Administrator}
+
+\TextField[name = administratorsig, width=20em, height=1.5em, value = Nathan Friedman]{}
+
+\vfill
+\color{lightgray} \centering for questions or concerns regarding this form \\ visit https://github.com/mcgill-csus/undergraduate-research-project-form/ \\ or email calem.bendell@mail.mcgill.ca or victor.chisholm@mcgill.ca
 
 \end{Form}
 \end{document}
